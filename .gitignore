@@ -13,7 +13,7 @@ tmp
 npm-debug.log*
 
 # Ignore built ts files
-dist/**/*
+dist/
 
 # Coverage reports
 coverage
