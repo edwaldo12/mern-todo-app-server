@@ -1,10 +1,9 @@
-import  { Router } from "express";
+import  { Router, json } from "express";
 import { getTodos, getTodo, addTodo, updateTodo, removeTodo} from "../controllers/todos";
-import bodyParser from "body-parser";
 
 const router = Router();
 
-const jsonParser = bodyParser.json();
+const jsonParser = json();
 
 router.get("/api/todos", getTodos);
 
