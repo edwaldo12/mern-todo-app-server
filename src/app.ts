@@ -9,26 +9,26 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 app.use(cors());
-// app.use(routes);
+app.use(routes);
 
-// const options = {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-//   useCreateIndex: true
-// };
+const options = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true
+};
 
-// mongoose.set('useFindAndModify', true);
-// mongoose
-//   .connect(uri, options)
-//   .then(() => {
-app.listen(PORT, () => {
-  console.info(`App is listening at http://localhost:${PORT}`);
-});
-//   })
-//   .catch((error) => {
-//     throw error;
-//   });
+mongoose.set('useFindAndModify', true);
+mongoose
+  .connect(uri, options)
+  .then(() => {
+    app.listen(PORT, () => {
+      console.info(`App is listening at http://localhost:${PORT}`);
+    });
+  })
+  .catch((error) => {
+    throw error;
+  });
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('jancuk');
-});
+// app.get('/', (req: Request, res: Response) => {
+//   res.send('Halaman Kosong');
+// });

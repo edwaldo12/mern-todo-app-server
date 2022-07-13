@@ -5,7 +5,7 @@
   "main": "app.ts",
   "scripts": {
     "build": "tsc",
-    "start" : "node dist/js/app.js",
+    "start": "concurrently \"tsc\" \"node dist/js/app.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
     "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write"
@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "body-parser": "1.19.0",
+    "concurrently": "^7.2.2",
     "cors": "2.8.5",
     "dotenv": "^16.0.1",
     "express": "4.17.1",
