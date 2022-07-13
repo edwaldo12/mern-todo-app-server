@@ -5,7 +5,7 @@
   "main": "app.ts",
   "scripts": {
     "build": "tsc",
-    "start" : "node/js/app.js",
+    "start" : "node dist/js/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
     "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write"
